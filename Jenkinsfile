@@ -124,7 +124,7 @@ pipeline {
                     steps {
                         script {
                                 try {
-                                  
+                                    sh """
                                     #!/bin/bash
                                     echo "Executing Fastlane test lane..."
                                     ${ env.FASTLANE } tests
