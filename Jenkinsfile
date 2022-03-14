@@ -153,7 +153,7 @@ pipeline {
                                 sh """
                                 #!/bin/bash
                                 echo "Executing Fastlane Linting lane..."
-                                ${ env.FASTLANE } lint
+                     
                                 """
                             }
                         }
