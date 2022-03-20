@@ -127,7 +127,7 @@ pipeline {
                                     sh """
                                     #!/bin/bash
                                     echo "Executing Fastlane test lane..."
-                                  
+                                    ${ env.FASTLANE } tests
                                     """
                                 } catch(exc) {
                                     currentBuild.result = "UNSTABLE"
@@ -153,7 +153,7 @@ pipeline {
                                 sh """
                                 #!/bin/bash
                                 echo "Executing Fastlane Linting lane..."
-                     
+                     		${ env.FASTLANE } lint
                                 """
                             }
                         }
@@ -177,7 +177,7 @@ pipeline {
                                 sh """
                                 #!/bin/bash
                                 echo "Executing Fastlane Code Coverage lane..."
-                             
+                             	${ env.FASTLANE } code_coverage
                                 """
                             }
                         }
